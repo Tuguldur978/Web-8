@@ -1,1 +1,19 @@
-        <!-- Write your code here -->
+<!doctype html>
+<html>
+  <head>
+    <title>Change Background Color</title>
+  </head>
+  <body>
+    <button onclick="changeColor()">Change Background</button>
+
+    <script>
+      function changeColor() {
+        if (document.body.style.backgroundColor === "lightblue") {
+          document.body.style.backgroundColor = "white";
+        } else {
+          document.body.style.backgroundColor = "lightblue";
+        }
+      }
+    </script>
+  </body>
+</html>
