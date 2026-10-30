@@ -1,1 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Number Counter</title>
+  </head>
+  <body>
+    <h1 id="number">0</h1>
+
+    <button onclick="increase()">+</button>
+    <button onclick="decrease()">-</button>
+    <button onclick="reset()">Reset</button>
+
+    <script>
+      let count = 0;
+
+      function updateNumber() {
+        let number = document.getElementById("number");
+
+        number.innerHTML = count;
+
+        if (count < 0) {
+          number.style.color = "red";
+        } else {
+          number.style.color = "black";
+        }
+      }
+
+      function increase() {
+        count++;
+        updateNumber();
+      }
+
+      function decrease() {
+        count--;
+        updateNumber();
+      }
+
+      function reset() {
+        count = 0;
+        updateNumber();
+      }
+    </script>
+  </body>
+</html>
 
