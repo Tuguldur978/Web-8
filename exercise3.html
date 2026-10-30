@@ -1,1 +1,27 @@
-   <!-- Write your code here -->
+<!doctype html>
+<html>
+  <head>
+    <title>Light and Dark Mode</title>
+  </head>
+  <body>
+    <button onclick="toggleMode()" id="modeButton">Switch to Dark</button>
+
+    <script>
+      let darkMode = false;
+
+      function toggleMode() {
+        if (darkMode === false) {
+          document.body.style.backgroundColor = "black";
+          document.body.style.color = "white";
+          document.getElementById("modeButton").innerHTML = "Switch to Light";
+          darkMode = true;
+        } else {
+          document.body.style.backgroundColor = "white";
+          document.body.style.color = "black";
+          document.getElementById("modeButton").innerHTML = "Switch to Dark";
+          darkMode = false;
+        }
+      }
+    </script>
+  </body>
+</html>
